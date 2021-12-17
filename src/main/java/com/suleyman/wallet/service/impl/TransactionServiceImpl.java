@@ -38,6 +38,7 @@ public class TransactionServiceImpl implements TransactionService {
 	 * @param transactionVo
 	 */
 	@Override
+	@Transactional
 	public ResponseVo debit(TransactionVo transactionVo) {
 
 		checkTransaction(transactionVo.getExtTransId());
@@ -57,6 +58,7 @@ public class TransactionServiceImpl implements TransactionService {
 	 * @param transactionVo
 	 */
 	@Override
+	@Transactional
 	public ResponseVo credit(TransactionVo transactionVo) {
 
 		checkTransaction(transactionVo.getExtTransId());
